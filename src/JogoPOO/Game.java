@@ -26,9 +26,9 @@ abstract public class Game implements WindowListener {
 
 	public Game() {
 		
-		font = new Font("Comic Sans MS", Font.BOLD, 16);
-		mainWindow = new JFrame("Joguinho do Panda");
-		mainWindow.setSize(640, 740);
+		font = new Font("Calibri", Font.BOLD, 16);
+		mainWindow = new JFrame("Jogo do Mercado");
+		mainWindow.setSize(800, 600);
 		mainWindow.setResizable(false);
 		mainWindow.addWindowListener(this);
 		active = false;
@@ -71,7 +71,7 @@ abstract public class Game implements WindowListener {
 
 	public void render() {
 		Graphics2D g = (Graphics2D) bufferStrategy.getDrawGraphics();
-		g.setColor(Color.green);
+		g.setColor(Color.pink);
 		g.setFont(font);
 		g.fillRect(0, 0, mainWindow.getWidth(), mainWindow.getHeight());
 		onRender(g);
@@ -98,23 +98,16 @@ abstract public class Game implements WindowListener {
 	public void windowClosing(WindowEvent e) {
 		terminate();
 	}
-
 	public void windowOpened(WindowEvent e) {
 	}
-
 	public void windowClosed(WindowEvent e) {
 	}
-
 	public void windowIconified(WindowEvent e) {
 	}
-
 	public void windowDeiconified(WindowEvent e) {
 	}
-
 	public void windowActivated(WindowEvent e) {
 	}
-
-
 	public void windowDeactivated(WindowEvent e) {
 	}
 }
